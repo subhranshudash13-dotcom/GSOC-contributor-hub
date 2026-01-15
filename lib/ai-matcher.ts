@@ -4,7 +4,7 @@ const AI_PROVIDER = process.env.AI_PROVIDER || 'openai'
 
 interface AIResponse {
     matches: Array<{
-        projectId: string
+        projectIndex: number
         score: number
         reasoning: string
         matchedSkills: string[]
@@ -156,15 +156,18 @@ async function callGroqAPI(prompt: string): Promise<AIResponse> {
 }
 
 function formatMatchResults(aiResponse: AIResponse, projects: GSoCProject[]): MatchResult[] {
-    return aiResponse.matches.map(match => {
-        const project = projects[match.projectIndex - 1]
-        return {
-            project,
-            score: match.score,
-            matchedSkills: match.matchedSkills,
-            reasoning: match.reasoning,
-        }
-    })
+    return aiResponse.matches
+        .map(match => {
+            const project = projects[match.projectIndex - 1]
+            if (!project) return null
+            return {
+                project,
+                score: match.score,
+                matchedSkills: match.matchedSkills,
+                reasoning: match.reasoning,
+            }
+        })
+        .filter((match): match is MatchResult => match !== null)
 }
 
 function fallbackMatching(profile: UserProfile, projects: GSoCProject[]): MatchResult[] {
@@ -205,8 +208,8 @@ function fallbackMatching(profile: UserProfile, projects: GSoCProject[]): MatchR
             score: Math.min(score, 100),
             matchedSkills,
             reasoning: `Matched ${matchedSkills.length} of your skills. ${project.difficulty === profile.experience
-                    ? 'Perfect difficulty level.'
-                    : 'Good difficulty level.'
+                ? 'Perfect difficulty level.'
+                : 'Good difficulty level.'
                 }`
         }
     })

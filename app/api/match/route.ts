@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import dbConnect from '@/lib/mongodb'
 import Project from '@/models/Project'
 import { matchProjectsWithAI } from '@/lib/ai-matcher'
-import type { UserProfile } from '@/types'
+import type { UserProfile, GSoCProject } from '@/types'
 
 export async function POST(req: NextRequest) {
     try {
@@ -21,11 +21,11 @@ export async function POST(req: NextRequest) {
         await dbConnect()
 
         // Fetch all active projects
-        const projects = await Project.find({
+        const projects = (await Project.find({
             applicationDeadline: { $gte: new Date() }
         })
             .limit(50)
-            .lean()
+            .lean()) as unknown as GSoCProject[]
 
         if (projects.length === 0) {
             return NextResponse.json(
