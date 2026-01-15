@@ -1,0 +1,55 @@
+{
+    "name": "GSoC Contributor Hub",
+    "short_name": "GSoC Hub",
+    "description": "Find and track your perfect Google Summer of Code projects with AI-powered matching",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A0A0A",
+    "theme_color": "#7C3AED",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "productivity",
+        "education",
+        "developer tools"
+    ],
+    "shortcuts": [
+        {
+            "name": "AI Matcher",
+            "short_name": "Matcher",
+            "description": "Find perfect projects with AI",
+            "url": "/matcher",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Browse Projects",
+            "short_name": "Projects",
+            "description": "Explore all GSoC projects",
+            "url": "/projects",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
