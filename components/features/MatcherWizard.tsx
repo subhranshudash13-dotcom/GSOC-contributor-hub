@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronRight, ChevronLeft, Sparkles, Loader2 } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Sparkles, Loader2, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -90,8 +90,8 @@ export function MatcherWizard() {
                                                 key={skill}
                                                 onClick={() => toggleSkill(skill)}
                                                 className={`px-4 py-2 rounded-full border-2 transition-all ${profile.skills.includes(skill)
-                                                        ? 'border-primary bg-primary text-primary-foreground'
-                                                        : 'border-border hover:border-primary/50'
+                                                    ? 'border-primary bg-primary text-primary-foreground'
+                                                    : 'border-border hover:border-primary/50'
                                                     }`}
                                             >
                                                 {skill}
@@ -148,8 +148,8 @@ export function MatcherWizard() {
                                                 key={option.value}
                                                 onClick={() => setProfile(prev => ({ ...prev, experience: option.value as any }))}
                                                 className={`w-full p-6 rounded-xl border-2 text-left transition-all ${profile.experience === option.value
-                                                        ? 'border-primary bg-primary/10'
-                                                        : 'border-border hover:border-primary/50'
+                                                    ? 'border-primary bg-primary/10'
+                                                    : 'border-border hover:border-primary/50'
                                                     }`}
                                             >
                                                 <div className="font-semibold text-lg">{option.label}</div>
@@ -341,9 +341,11 @@ export function MatcherWizard() {
                                                     "{match.reasoning}"
                                                 </p>
 
-                                                <Button variant="gradient" className="w-full">
-                                                    View Project Details
-                                                </Button>
+                                                <a href={match.project.githubUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+                                                    <Button variant="gradient" className="w-full">
+                                                        View Project Details
+                                                    </Button>
+                                                </a>
                                             </CardContent>
                                         </Card>
                                     </motion.div>
