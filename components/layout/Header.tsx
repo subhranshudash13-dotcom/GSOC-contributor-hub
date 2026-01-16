@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Sparkles, ArrowRight } from 'lucide-react'
+import { Sparkles, ArrowRight, Github } from 'lucide-react'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 
 export function Header() {
@@ -29,6 +29,15 @@ export function Header() {
                     >
                         Browse Projects
                     </Link>
+                    <a
+                        href="https://github.com/subhranshudash13-dotcom/GSOC-contributor-hub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label="GitHub Repository"
+                    >
+                        <Github className="h-5 w-5" />
+                    </a>
                     <Link
                         href="/matcher"
                         className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
@@ -45,6 +54,15 @@ export function Header() {
 
                 <div className="flex items-center space-x-4">
                     <ThemeToggle />
+                    <a
+                        href="https://github.com/subhranshudash13-dotcom/GSOC-contributor-hub"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 text-sm font-medium transition-colors"
+                    >
+                        <Sparkles className="h-4 w-4 text-primary" />
+                        Source Code
+                    </a>
                     <Link
                         href="/matcher"
                         className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full gradient-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"

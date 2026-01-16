@@ -72,11 +72,11 @@ export function Footer() {
                         <h4 className="font-semibold mb-4">Connect</h4>
                         <div className="flex space-x-4">
                             <a
-                                href="https://github.com"
+                                href="https://github.com/subhranshudash13-dotcom/GSOC-contributor-hub"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition-colors"
-                                aria-label="GitHub"
+                                aria-label="GitHub Repository"
                             >
                                 <Github className="h-5 w-5" />
                             </a>

@@ -134,6 +134,18 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
                                 </div>
 
                                 <div className="pt-4 space-y-3">
+                                    <a
+                                        href={`https://summerofcode.withgoogle.com/archive/${project.year || 2025}/organizations/${project.org.toLowerCase().replace(/\s+/g, '-')}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block"
+                                    >
+                                        <Button className="w-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all font-bold text-base" size="lg" variant="gradient">
+                                            Official Project Source
+                                            <ExternalLink className="h-4 w-4 ml-2" />
+                                        </Button>
+                                    </a>
+
                                     {project.githubUrl && (
                                         <a
                                             href={project.githubUrl}
@@ -141,9 +153,9 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
                                             rel="noopener noreferrer"
                                             className="block"
                                         >
-                                            <Button className="w-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all font-bold" size="lg" variant="gradient">
-                                                Official Project Source
-                                                <ExternalLink className="h-4 w-4 ml-2" />
+                                            <Button variant="outline" className="w-full hover:bg-white/5 border-primary/20" size="lg">
+                                                <Code className="h-4 w-4 mr-2" />
+                                                View Source Code
                                             </Button>
                                         </a>
                                     )}

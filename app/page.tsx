@@ -5,7 +5,7 @@ import { HeroSearchBar } from '@/components/features/HeroSearchBar'
 import { StatsDisplay } from '@/components/features/StatsDisplay'
 import { ProjectCarousel } from '@/components/features/ProjectCarousel'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Sparkles, Target, Rocket } from 'lucide-react'
+import { ArrowRight, Sparkles, Target, Rocket, Github } from 'lucide-react'
 
 export default function HomePage() {
     return (
@@ -65,6 +65,16 @@ export default function HomePage() {
                                     Browse All Projects
                                 </Button>
                             </Link>
+                            <a
+                                href="https://github.com/subhranshudash13-dotcom/GSOC-contributor-hub"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button variant="secondary" size="lg" className="glass-dark border-primary/20 hover:border-primary/40 group">
+                                    <Github className="h-5 w-5 mr-2" />
+                                    View Hub Source
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </div>
