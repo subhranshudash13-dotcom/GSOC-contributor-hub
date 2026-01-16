@@ -202,9 +202,11 @@ export default function ProjectsPage() {
                                         <span className="text-muted-foreground">
                                             Deadline: {formatDate(project.applicationDeadline)}
                                         </span>
-                                        <Button variant="gradient">
-                                            View Details
-                                        </Button>
+                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                                            <Button variant="gradient">
+                                                View Details
+                                            </Button>
+                                        </a>
                                     </div>
                                 </CardContent>
                             </Card>

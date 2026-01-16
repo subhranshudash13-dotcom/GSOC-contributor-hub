@@ -34,6 +34,7 @@ const FEATURED_PROJECTS = [
         techStack: ['Python', 'PostgreSQL', 'Django'],
         difficulty: 'advanced' as const,
         stars: 1050,
+        githubUrl: 'https://github.com/django/deps',
     },
 ]
 
@@ -121,18 +122,20 @@ export function ProjectCarousel() {
                                     </Badge>
                                 </div>
 
-                                <Button variant="gradient" className="w-full group">
-                                    View Project
-                                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    </motion.div>
-                </AnimatePresence>
-            </div>
+                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+                                    <Button variant="gradient" className="w-full group">
+                                        View Project
+                                        <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </Button>
+                                </a>
+                            </CardContent >
+                        </Card >
+                    </motion.div >
+                </AnimatePresence >
+            </div >
 
             {/* Navigation */}
-            <div className="flex justify-center gap-4 mt-6">
+            < div className="flex justify-center gap-4 mt-6" >
                 <Button
                     variant="ghost"
                     size="icon"
@@ -151,8 +154,8 @@ export function ProjectCarousel() {
                                 setCurrentIndex(index)
                             }}
                             className={`h-2 rounded-full transition-all ${index === currentIndex
-                                    ? 'w-8 bg-primary'
-                                    : 'w-2 bg-primary/30 hover:bg-primary/50'
+                                ? 'w-8 bg-primary'
+                                : 'w-2 bg-primary/30 hover:bg-primary/50'
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />
@@ -167,7 +170,7 @@ export function ProjectCarousel() {
                 >
                     <ChevronRight className="h-5 w-5" />
                 </Button>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
