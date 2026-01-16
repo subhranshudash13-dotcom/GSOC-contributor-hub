@@ -26,9 +26,8 @@ export function StatsDisplay() {
                 const response = await fetch('/api/projects')
                 if (response.ok) {
                     const data = await response.json()
-                    const uniqueOrgs = new Set(data.projects?.map((p: any) => p.org) || []).size
-                    targets.projects = data.projects?.length || 0
-                    targets.orgs = uniqueOrgs || 185
+                    targets.projects = data.pagination?.total || 617
+                    targets.orgs = 185 // More accurate for 2025
                 }
             } catch (error) {
                 console.error('Failed to fetch stats:', error)

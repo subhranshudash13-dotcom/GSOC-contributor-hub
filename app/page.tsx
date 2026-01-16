@@ -27,15 +27,15 @@ export default function HomePage() {
                         </div>
 
                         {/* Main Heading */}
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold max-w-4xl mx-auto">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold max-w-4xl mx-auto leading-tight">
                             Find Your Dream{' '}
-                            <span className="text-gradient gradient-purple">
+                            <span className="text-gradient gradient-purple animate-gradient font-extrabold">
                                 Open Source Project
                             </span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                            AI-powered project matching for Google Summer of Code. Discover perfect opportunities from 500+ organizations.
+                            AI-powered project matching for Google Summer of Code. Discover perfect opportunities from <span className="text-primary font-bold">617</span> organizations.
                         </p>
 
                         {/* Countdown */}

@@ -70,8 +70,8 @@ Return ONLY valid JSON in this exact format:
   ]
 }
 
-Return ALL matches that score 50 or higher, ordered by score (highest first).
-There is no limit - return as many matches as meet the criteria.`
+Return ALL matches that score 60 or higher, ordered by score (highest first).
+There is no limit - return as many matches as meet the criteria. If there are many matches, provide them all.`
 }
 
 async function callOpenAI(prompt: string): Promise<AIResponse> {
@@ -100,7 +100,7 @@ async function callOpenAI(prompt: string): Promise<AIResponse> {
                 }
             ],
             temperature: 0.7,
-            max_tokens: 2000,
+            max_tokens: 4000,
         }),
     })
 
@@ -141,7 +141,7 @@ async function callGroqAPI(prompt: string): Promise<AIResponse> {
                 }
             ],
             temperature: 0.7,
-            max_tokens: 2000,
+            max_tokens: 4000,
         }),
     })
 

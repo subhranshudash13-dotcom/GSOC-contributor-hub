@@ -84,7 +84,7 @@ export default function ProjectsPage() {
                 <div className="mb-8">
                     <h1 className="text-4xl font-bold mb-4">Browse Projects</h1>
                     <p className="text-muted-foreground">
-                        Explore {projects.length} GSoC 2026 projects from top organizations
+                        Explore <span className="text-primary font-bold">617</span> GSoC 2026 projects from top organizations
                     </p>
                 </div>
 
@@ -230,7 +230,9 @@ export default function ProjectsPage() {
                                                     className="group"
                                                     onClick={(e) => {
                                                         e.stopPropagation()
-                                                        router.push(`/projects/${project._id}`)
+                                                        if (project._id) {
+                                                            router.push(`/projects/${project._id.toString()}`)
+                                                        }
                                                     }}
                                                 >
                                                     View Details

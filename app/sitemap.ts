@@ -1,27 +1,32 @@
 import { MetadataRoute } from 'next'
+import dbConnect from '@/lib/mongodb'
+import Project from '@/models/Project'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://gsoc-contributor-hub.vercel.app'
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const baseUrl = 'https://gsoc-contributor-hub.vercel.app'
 
-    return [
-        {
-            url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
-            priority: 1,
-        },
-        {
-            url: `${baseUrl}/projects`,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/matcher`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        },
-        // We can add dynamic project URLs here later if we have individual project pages
-    ]
+    // Connect to DB and fetch projects for dynamic routes
+    await dbConnect()
+    const projects = await Project.find({}).select('_id updatedAt').lean()
+
+    const projectUrls = projects.map((project: any) => ({
+        url: `${baseUrl}/projects/${project._id}`,
+        lastModified: project.updatedAt || new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+    }))
+
+    // Static routes
+    const routes = [
+        '',
+        '/projects',
+        '/matcher',
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        changeFrequency: 'daily' as const,
+        priority: route === '' ? 1 : 0.9,
+    }))
+
+    return [...routes, ...projectUrls]
 }

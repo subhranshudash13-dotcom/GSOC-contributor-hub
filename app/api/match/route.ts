@@ -23,8 +23,13 @@ export async function POST(req: NextRequest) {
         // Fetch all projects (including historical GSoC data)
         // Remove the deadline filter to include historical projects
         // Remove limit to get ALL projects for matching
-        const projects = (await Project.find({})
-            .lean()) as unknown as GSoCProject[]
+        const projectsRaw = (await Project.find({})
+            .lean()) as any[]
+
+        const projects = projectsRaw.map(p => ({
+            ...p,
+            _id: p._id.toString()
+        })) as unknown as GSoCProject[]
 
         if (projects.length === 0) {
             return NextResponse.json(

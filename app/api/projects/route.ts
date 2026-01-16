@@ -51,7 +51,7 @@ export async function GET(req: NextRequest) {
         const sort: any = { [sortBy]: sortOrder }
 
         // Execute query
-        const [projects, total] = await Promise.all([
+        const [projectsRaw, total] = await Promise.all([
             Project.find(query)
                 .sort(sort)
                 .skip(skip)
@@ -59,6 +59,11 @@ export async function GET(req: NextRequest) {
                 .lean(),
             Project.countDocuments(query)
         ])
+
+        const projects = (projectsRaw as any[]).map(p => ({
+            ...p,
+            _id: p._id.toString()
+        }))
 
         return NextResponse.json({
             projects,

@@ -337,7 +337,7 @@ export function MatcherWizard() {
                                                             {match.project.title}
                                                         </CardTitle>
                                                     </div>
-                                                    <motion.div 
+                                                    <motion.div
                                                         className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
                                                         initial={{ scale: 0 }}
                                                         animate={{ scale: 1 }}
@@ -368,18 +368,18 @@ export function MatcherWizard() {
                                                 </div>
 
                                                 {match.project._id ? (
-                                                    <Button 
-                                                        onClick={() => router.push(`/projects/${match.project._id}`)}
-                                                        variant="gradient" 
+                                                    <Button
+                                                        onClick={() => match.project._id && router.push(`/projects/${match.project._id.toString()}`)}
+                                                        variant="gradient"
                                                         className="w-full group"
                                                     >
                                                         View Full Project Details
                                                         <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                                     </Button>
                                                 ) : (
-                                                    <Button 
-                                                        variant="outline" 
-                                                        className="w-full" 
+                                                    <Button
+                                                        variant="outline"
+                                                        className="w-full"
                                                         disabled
                                                     >
                                                         Project Details Not Available

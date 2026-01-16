@@ -131,7 +131,7 @@ export function ProjectCarousel() {
                                 </div>
 
                                 <Button
-                                    onClick={() => router.push(`/projects/${project._id}`)}
+                                    onClick={() => project._id && router.push(`/projects/${project._id.toString()}`)}
                                     variant="gradient"
                                     className="w-full group"
                                 >
