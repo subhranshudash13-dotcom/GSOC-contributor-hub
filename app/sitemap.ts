@@ -3,7 +3,7 @@ import dbConnect from '@/lib/mongodb'
 import Project from '@/models/Project'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://gsoc-contributor-hub.vercel.app'
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://gsoc-contributor-hub.vercel.app'
 
     // Connect to DB and fetch projects for dynamic routes
     await dbConnect()

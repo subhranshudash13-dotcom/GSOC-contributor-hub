@@ -1,7 +1,7 @@
 {
-    "name": "GSoC Contributor Hub",
-    "short_name": "GSoC Hub",
-    "description": "Find and track your perfect Google Summer of Code projects with AI-powered matching",
+    "name": "GSoC 2026 | Contributor Hub",
+    "short_name": "GSoC 2026 Hub",
+    "description": "Find and track your perfect GSoC 2026 projects with our platform",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0A0A0A",
