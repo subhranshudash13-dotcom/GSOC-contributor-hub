@@ -1,12 +1,17 @@
 'use client'
 
 import { AlertCircle, Info } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function GSoCDataBanner() {
     const [isVisible, setIsVisible] = useState(true)
+    const [mounted, setMounted] = useState(false)
 
-    if (!isVisible) return null
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted || !isVisible) return null
 
     return (
         <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-sm border-b border-purple-500/20">
