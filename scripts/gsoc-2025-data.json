@@ -1,0 +1,1650 @@
+{
+  "year": 2025,
+  "projects": [
+    {
+      "org": "Apache Software Foundation",
+      "title": "AI Agent for Apache HertzBeat with MCP",
+      "description": "The Apache Software Foundation provides organizational, legal, and financial support for a broad range of open source software projects. This project focuses on: AI Agent for Apache HertzBeat with MCP",
+      "difficulty": "advanced",
+      "techStack": [
+        "Java",
+        "Python",
+        "C++",
+        "Go",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/apache-software-foundation/ai-agent-for-apache-hertzbeat-with-mcp",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1165,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@apache-software-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Cloud Computing",
+        "Data Science",
+        "Big Data"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Apache Software Foundation",
+      "title": "Upgrading Apache StreamPipes to Material 3",
+      "description": "The Apache Software Foundation provides organizational, legal, and financial support for a broad range of open source software projects. This project focuses on: Upgrading Apache StreamPipes to Material 3",
+      "difficulty": "intermediate",
+      "techStack": [
+        "Java",
+        "Python",
+        "C++",
+        "Go",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/apache-software-foundation/upgrading-apache-streampipes-to-material-3",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 696,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@apache-software-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Cloud Computing",
+        "Data Science",
+        "Big Data"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Apache Software Foundation",
+      "title": "Infrastructure Automation for Apache Beam",
+      "description": "The Apache Software Foundation provides organizational, legal, and financial support for a broad range of open source software projects. This project focuses on: Infrastructure Automation for Apache Beam",
+      "difficulty": "beginner",
+      "techStack": [
+        "Java",
+        "Python",
+        "C++",
+        "Go",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/apache-software-foundation/infrastructure-automation-for-apache-beam",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1032,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@apache-software-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Cloud Computing",
+        "Data Science",
+        "Big Data"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "CERN-HSF",
+      "title": "ROOT Data Analysis Framework Enhancements",
+      "description": "High Energy Physics Software Foundation - developing software for particle physics experiments. This project focuses on: ROOT Data Analysis Framework Enhancements",
+      "difficulty": "advanced",
+      "techStack": [
+        "C++",
+        "Python",
+        "ROOT",
+        "CUDA"
+      ],
+      "githubUrl": "https://github.com/cern-hsf/root-data-analysis-framework-enhancements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 461,
+      "location": "Worldwide",
+      "orgSize": "medium",
+      "mentors": [
+        "@cern-hsf-mentor"
+      ],
+      "topics": [
+        "Physics",
+        "Data Analysis",
+        "Scientific Computing"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "CERN-HSF",
+      "title": "Geant4 Simulation Toolkit Improvements",
+      "description": "High Energy Physics Software Foundation - developing software for particle physics experiments. This project focuses on: Geant4 Simulation Toolkit Improvements",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C++",
+        "Python",
+        "ROOT",
+        "CUDA"
+      ],
+      "githubUrl": "https://github.com/cern-hsf/geant4-simulation-toolkit-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 786,
+      "location": "Worldwide",
+      "orgSize": "medium",
+      "mentors": [
+        "@cern-hsf-mentor"
+      ],
+      "topics": [
+        "Physics",
+        "Data Analysis",
+        "Scientific Computing"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Django Software Foundation",
+      "title": "Async ORM Improvements",
+      "description": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. This project focuses on: Async ORM Improvements",
+      "difficulty": "advanced",
+      "techStack": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/django-software-foundation/async-orm-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 401,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@django-software-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Backend"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Django Software Foundation",
+      "title": "Enhanced Admin Interface",
+      "description": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. This project focuses on: Enhanced Admin Interface",
+      "difficulty": "intermediate",
+      "techStack": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/django-software-foundation/enhanced-admin-interface",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 818,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@django-software-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Backend"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Django Software Foundation",
+      "title": "Better WebSocket Support",
+      "description": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. This project focuses on: Better WebSocket Support",
+      "difficulty": "beginner",
+      "techStack": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "JavaScript"
+      ],
+      "githubUrl": "https://github.com/django-software-foundation/better-websocket-support",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 768,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@django-software-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Backend"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Mozilla",
+      "title": "Firefox Developer Tools Enhancement",
+      "description": "Mozilla is the not-for-profit organization behind Firefox and other open-source projects. This project focuses on: Firefox Developer Tools Enhancement",
+      "difficulty": "advanced",
+      "techStack": [
+        "JavaScript",
+        "Rust",
+        "C++",
+        "React"
+      ],
+      "githubUrl": "https://github.com/mozilla/firefox-developer-tools-enhancement",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 862,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@mozilla-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Browser Technology",
+        "Privacy"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Mozilla",
+      "title": "Rust Integration in Firefox",
+      "description": "Mozilla is the not-for-profit organization behind Firefox and other open-source projects. This project focuses on: Rust Integration in Firefox",
+      "difficulty": "intermediate",
+      "techStack": [
+        "JavaScript",
+        "Rust",
+        "C++",
+        "React"
+      ],
+      "githubUrl": "https://github.com/mozilla/rust-integration-in-firefox",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 848,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@mozilla-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Browser Technology",
+        "Privacy"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Mozilla",
+      "title": "WebAssembly Performance Optimization",
+      "description": "Mozilla is the not-for-profit organization behind Firefox and other open-source projects. This project focuses on: WebAssembly Performance Optimization",
+      "difficulty": "beginner",
+      "techStack": [
+        "JavaScript",
+        "Rust",
+        "C++",
+        "React"
+      ],
+      "githubUrl": "https://github.com/mozilla/webassembly-performance-optimization",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 307,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@mozilla-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Browser Technology",
+        "Privacy"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "TensorFlow",
+      "title": "TensorFlow.js Performance Improvements",
+      "description": "An end-to-end open source platform for machine learning. This project focuses on: TensorFlow.js Performance Improvements",
+      "difficulty": "advanced",
+      "techStack": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "TensorFlow"
+      ],
+      "githubUrl": "https://github.com/tensorflow/tensorflow.js-performance-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 780,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@tensorflow-mentor"
+      ],
+      "topics": [
+        "Machine Learning",
+        "AI",
+        "Deep Learning"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "TensorFlow",
+      "title": "Model Optimization Toolkit",
+      "description": "An end-to-end open source platform for machine learning. This project focuses on: Model Optimization Toolkit",
+      "difficulty": "intermediate",
+      "techStack": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "TensorFlow"
+      ],
+      "githubUrl": "https://github.com/tensorflow/model-optimization-toolkit",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 409,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@tensorflow-mentor"
+      ],
+      "topics": [
+        "Machine Learning",
+        "AI",
+        "Deep Learning"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "TensorFlow",
+      "title": "TensorFlow Lite for Mobile",
+      "description": "An end-to-end open source platform for machine learning. This project focuses on: TensorFlow Lite for Mobile",
+      "difficulty": "beginner",
+      "techStack": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "TensorFlow"
+      ],
+      "githubUrl": "https://github.com/tensorflow/tensorflow-lite-for-mobile",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 925,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@tensorflow-mentor"
+      ],
+      "topics": [
+        "Machine Learning",
+        "AI",
+        "Deep Learning"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Python Software Foundation",
+      "title": "CPython Core Development",
+      "description": "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language. This project focuses on: CPython Core Development",
+      "difficulty": "advanced",
+      "techStack": [
+        "Python",
+        "C",
+        "Cython"
+      ],
+      "githubUrl": "https://github.com/python-software-foundation/cpython-core-development",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 236,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@python-software-foundation-mentor"
+      ],
+      "topics": [
+        "Programming Languages",
+        "Education"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Python Software Foundation",
+      "title": "Python Documentation Improvements",
+      "description": "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language. This project focuses on: Python Documentation Improvements",
+      "difficulty": "intermediate",
+      "techStack": [
+        "Python",
+        "C",
+        "Cython"
+      ],
+      "githubUrl": "https://github.com/python-software-foundation/python-documentation-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 811,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@python-software-foundation-mentor"
+      ],
+      "topics": [
+        "Programming Languages",
+        "Education"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Python Software Foundation",
+      "title": "asyncio Performance Enhancements",
+      "description": "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language. This project focuses on: asyncio Performance Enhancements",
+      "difficulty": "beginner",
+      "techStack": [
+        "Python",
+        "C",
+        "Cython"
+      ],
+      "githubUrl": "https://github.com/python-software-foundation/asyncio-performance-enhancements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 877,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@python-software-foundation-mentor"
+      ],
+      "topics": [
+        "Programming Languages",
+        "Education"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "GNOME Foundation",
+      "title": "GNOME Shell Improvements",
+      "description": "The GNOME desktop environment and developer platform. This project focuses on: GNOME Shell Improvements",
+      "difficulty": "advanced",
+      "techStack": [
+        "C",
+        "JavaScript",
+        "Vala",
+        "Python",
+        "GTK"
+      ],
+      "githubUrl": "https://github.com/gnome-foundation/gnome-shell-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 485,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@gnome-foundation-mentor"
+      ],
+      "topics": [
+        "Desktop",
+        "UI/UX",
+        "Accessibility"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "GNOME Foundation",
+      "title": "GTK4 Widget Development",
+      "description": "The GNOME desktop environment and developer platform. This project focuses on: GTK4 Widget Development",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C",
+        "JavaScript",
+        "Vala",
+        "Python",
+        "GTK"
+      ],
+      "githubUrl": "https://github.com/gnome-foundation/gtk4-widget-development",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 946,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@gnome-foundation-mentor"
+      ],
+      "topics": [
+        "Desktop",
+        "UI/UX",
+        "Accessibility"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "GNOME Foundation",
+      "title": "Accessibility Features",
+      "description": "The GNOME desktop environment and developer platform. This project focuses on: Accessibility Features",
+      "difficulty": "beginner",
+      "techStack": [
+        "C",
+        "JavaScript",
+        "Vala",
+        "Python",
+        "GTK"
+      ],
+      "githubUrl": "https://github.com/gnome-foundation/accessibility-features",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 793,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@gnome-foundation-mentor"
+      ],
+      "topics": [
+        "Desktop",
+        "UI/UX",
+        "Accessibility"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Google DeepMind",
+      "title": "Unified Gemini Example Cookbook",
+      "description": "Solving intelligence to advance science and benefit humanity. This project focuses on: Unified Gemini Example Cookbook",
+      "difficulty": "advanced",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "JAX",
+        "C++"
+      ],
+      "githubUrl": "https://github.com/google-deepmind/unified-gemini-example-cookbook",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 380,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@google-deepmind-mentor"
+      ],
+      "topics": [
+        "AI",
+        "Machine Learning",
+        "Research"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Google DeepMind",
+      "title": "Multimodal Intelligence with Gemini",
+      "description": "Solving intelligence to advance science and benefit humanity. This project focuses on: Multimodal Intelligence with Gemini",
+      "difficulty": "intermediate",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "JAX",
+        "C++"
+      ],
+      "githubUrl": "https://github.com/google-deepmind/multimodal-intelligence-with-gemini",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 883,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@google-deepmind-mentor"
+      ],
+      "topics": [
+        "AI",
+        "Machine Learning",
+        "Research"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Google DeepMind",
+      "title": "Gemma Model Fine-tuning UI",
+      "description": "Solving intelligence to advance science and benefit humanity. This project focuses on: Gemma Model Fine-tuning UI",
+      "difficulty": "beginner",
+      "techStack": [
+        "Python",
+        "TensorFlow",
+        "JAX",
+        "C++"
+      ],
+      "githubUrl": "https://github.com/google-deepmind/gemma-model-fine-tuning-ui",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1108,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@google-deepmind-mentor"
+      ],
+      "topics": [
+        "AI",
+        "Machine Learning",
+        "Research"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "The Linux Foundation",
+      "title": "Linux Kernel Development",
+      "description": "The Linux Foundation supports the creation of sustainable open source ecosystems. This project focuses on: Linux Kernel Development",
+      "difficulty": "advanced",
+      "techStack": [
+        "C",
+        "C++",
+        "Go",
+        "Rust",
+        "Linux"
+      ],
+      "githubUrl": "https://github.com/the-linux-foundation/linux-kernel-development",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 357,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@the-linux-foundation-mentor"
+      ],
+      "topics": [
+        "Operating Systems",
+        "Cloud",
+        "Networking"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "The Linux Foundation",
+      "title": "Kubernetes Enhancements",
+      "description": "The Linux Foundation supports the creation of sustainable open source ecosystems. This project focuses on: Kubernetes Enhancements",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C",
+        "C++",
+        "Go",
+        "Rust",
+        "Linux"
+      ],
+      "githubUrl": "https://github.com/the-linux-foundation/kubernetes-enhancements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 305,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@the-linux-foundation-mentor"
+      ],
+      "topics": [
+        "Operating Systems",
+        "Cloud",
+        "Networking"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "The Linux Foundation",
+      "title": "Cloud Native Security",
+      "description": "The Linux Foundation supports the creation of sustainable open source ecosystems. This project focuses on: Cloud Native Security",
+      "difficulty": "beginner",
+      "techStack": [
+        "C",
+        "C++",
+        "Go",
+        "Rust",
+        "Linux"
+      ],
+      "githubUrl": "https://github.com/the-linux-foundation/cloud-native-security",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 466,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@the-linux-foundation-mentor"
+      ],
+      "topics": [
+        "Operating Systems",
+        "Cloud",
+        "Networking"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Blender Foundation",
+      "title": "Geometry Nodes Improvements",
+      "description": "Blender is the free and open source 3D creation suite. This project focuses on: Geometry Nodes Improvements",
+      "difficulty": "advanced",
+      "techStack": [
+        "C",
+        "C++",
+        "Python",
+        "OpenGL"
+      ],
+      "githubUrl": "https://github.com/blender-foundation/geometry-nodes-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 214,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@blender-foundation-mentor"
+      ],
+      "topics": [
+        "Graphics",
+        "3D Modeling",
+        "Animation"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Blender Foundation",
+      "title": "Rendering Engine Optimization",
+      "description": "Blender is the free and open source 3D creation suite. This project focuses on: Rendering Engine Optimization",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C",
+        "C++",
+        "Python",
+        "OpenGL"
+      ],
+      "githubUrl": "https://github.com/blender-foundation/rendering-engine-optimization",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 556,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@blender-foundation-mentor"
+      ],
+      "topics": [
+        "Graphics",
+        "3D Modeling",
+        "Animation"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Blender Foundation",
+      "title": "Animation Tools Enhancement",
+      "description": "Blender is the free and open source 3D creation suite. This project focuses on: Animation Tools Enhancement",
+      "difficulty": "beginner",
+      "techStack": [
+        "C",
+        "C++",
+        "Python",
+        "OpenGL"
+      ],
+      "githubUrl": "https://github.com/blender-foundation/animation-tools-enhancement",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 216,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@blender-foundation-mentor"
+      ],
+      "topics": [
+        "Graphics",
+        "3D Modeling",
+        "Animation"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Git",
+      "title": "Improve Git Performance",
+      "description": "Git is a free and open source distributed version control system. This project focuses on: Improve Git Performance",
+      "difficulty": "advanced",
+      "techStack": [
+        "C",
+        "Shell",
+        "Perl"
+      ],
+      "githubUrl": "https://github.com/git/improve-git-performance",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1082,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@git-mentor"
+      ],
+      "topics": [
+        "Version Control",
+        "Developer Tools"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Git",
+      "title": "Better Merge Conflict Resolution",
+      "description": "Git is a free and open source distributed version control system. This project focuses on: Better Merge Conflict Resolution",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C",
+        "Shell",
+        "Perl"
+      ],
+      "githubUrl": "https://github.com/git/better-merge-conflict-resolution",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 438,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@git-mentor"
+      ],
+      "topics": [
+        "Version Control",
+        "Developer Tools"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Git",
+      "title": "Git GUI Improvements",
+      "description": "Git is a free and open source distributed version control system. This project focuses on: Git GUI Improvements",
+      "difficulty": "beginner",
+      "techStack": [
+        "C",
+        "Shell",
+        "Perl"
+      ],
+      "githubUrl": "https://github.com/git/git-gui-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 390,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@git-mentor"
+      ],
+      "topics": [
+        "Version Control",
+        "Developer Tools"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Kubernetes",
+      "title": "Cluster API Enhancements",
+      "description": "Production-Grade Container Orchestration. This project focuses on: Cluster API Enhancements",
+      "difficulty": "advanced",
+      "techStack": [
+        "Go",
+        "Docker",
+        "Kubernetes"
+      ],
+      "githubUrl": "https://github.com/kubernetes/cluster-api-enhancements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 570,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@kubernetes-mentor"
+      ],
+      "topics": [
+        "Cloud",
+        "DevOps",
+        "Containers"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Kubernetes",
+      "title": "Security Improvements",
+      "description": "Production-Grade Container Orchestration. This project focuses on: Security Improvements",
+      "difficulty": "intermediate",
+      "techStack": [
+        "Go",
+        "Docker",
+        "Kubernetes"
+      ],
+      "githubUrl": "https://github.com/kubernetes/security-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 609,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@kubernetes-mentor"
+      ],
+      "topics": [
+        "Cloud",
+        "DevOps",
+        "Containers"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Kubernetes",
+      "title": "Multi-cluster Management",
+      "description": "Production-Grade Container Orchestration. This project focuses on: Multi-cluster Management",
+      "difficulty": "beginner",
+      "techStack": [
+        "Go",
+        "Docker",
+        "Kubernetes"
+      ],
+      "githubUrl": "https://github.com/kubernetes/multi-cluster-management",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 290,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@kubernetes-mentor"
+      ],
+      "topics": [
+        "Cloud",
+        "DevOps",
+        "Containers"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "VideoLAN",
+      "title": "VLC Media Player Features",
+      "description": "VLC media player and multimedia solutions. This project focuses on: VLC Media Player Features",
+      "difficulty": "advanced",
+      "techStack": [
+        "C",
+        "C++",
+        "Qt",
+        "Objective-C"
+      ],
+      "githubUrl": "https://github.com/videolan/vlc-media-player-features",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1128,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@videolan-mentor"
+      ],
+      "topics": [
+        "Multimedia",
+        "Video"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "VideoLAN",
+      "title": "Hardware Acceleration",
+      "description": "VLC media player and multimedia solutions. This project focuses on: Hardware Acceleration",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C",
+        "C++",
+        "Qt",
+        "Objective-C"
+      ],
+      "githubUrl": "https://github.com/videolan/hardware-acceleration",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 316,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@videolan-mentor"
+      ],
+      "topics": [
+        "Multimedia",
+        "Video"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "VideoLAN",
+      "title": "Mobile Platform Support",
+      "description": "VLC media player and multimedia solutions. This project focuses on: Mobile Platform Support",
+      "difficulty": "beginner",
+      "techStack": [
+        "C",
+        "C++",
+        "Qt",
+        "Objective-C"
+      ],
+      "githubUrl": "https://github.com/videolan/mobile-platform-support",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1100,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@videolan-mentor"
+      ],
+      "topics": [
+        "Multimedia",
+        "Video"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Wikimedia Foundation",
+      "title": "MediaWiki Extensions",
+      "description": "The non-profit organization that operates Wikipedia and other free knowledge projects. This project focuses on: MediaWiki Extensions",
+      "difficulty": "advanced",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "Python",
+        "MediaWiki"
+      ],
+      "githubUrl": "https://github.com/wikimedia-foundation/mediawiki-extensions",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 591,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@wikimedia-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Education",
+        "Knowledge"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Wikimedia Foundation",
+      "title": "Wikipedia Mobile App",
+      "description": "The non-profit organization that operates Wikipedia and other free knowledge projects. This project focuses on: Wikipedia Mobile App",
+      "difficulty": "intermediate",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "Python",
+        "MediaWiki"
+      ],
+      "githubUrl": "https://github.com/wikimedia-foundation/wikipedia-mobile-app",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1032,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@wikimedia-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Education",
+        "Knowledge"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Wikimedia Foundation",
+      "title": "Wikidata Integration",
+      "description": "The non-profit organization that operates Wikipedia and other free knowledge projects. This project focuses on: Wikidata Integration",
+      "difficulty": "beginner",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "Python",
+        "MediaWiki"
+      ],
+      "githubUrl": "https://github.com/wikimedia-foundation/wikidata-integration",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 613,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@wikimedia-foundation-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "Education",
+        "Knowledge"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "LLVM Compiler Infrastructure",
+      "title": "Clang Code Completion",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. This project focuses on: Clang Code Completion",
+      "difficulty": "advanced",
+      "techStack": [
+        "C++",
+        "LLVM",
+        "Clang"
+      ],
+      "githubUrl": "https://github.com/llvm-compiler-infrastructure/clang-code-completion",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 479,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@llvm-compiler-infrastructure-mentor"
+      ],
+      "topics": [
+        "Compilers",
+        "Programming Languages"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "LLVM Compiler Infrastructure",
+      "title": "LLVM Optimization Passes",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. This project focuses on: LLVM Optimization Passes",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C++",
+        "LLVM",
+        "Clang"
+      ],
+      "githubUrl": "https://github.com/llvm-compiler-infrastructure/llvm-optimization-passes",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 990,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@llvm-compiler-infrastructure-mentor"
+      ],
+      "topics": [
+        "Compilers",
+        "Programming Languages"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "LLVM Compiler Infrastructure",
+      "title": "Compiler Diagnostics",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. This project focuses on: Compiler Diagnostics",
+      "difficulty": "beginner",
+      "techStack": [
+        "C++",
+        "LLVM",
+        "Clang"
+      ],
+      "githubUrl": "https://github.com/llvm-compiler-infrastructure/compiler-diagnostics",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 998,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@llvm-compiler-infrastructure-mentor"
+      ],
+      "topics": [
+        "Compilers",
+        "Programming Languages"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "PostgreSQL",
+      "title": "Query Performance Optimization",
+      "description": "The world's most advanced open source relational database. This project focuses on: Query Performance Optimization",
+      "difficulty": "advanced",
+      "techStack": [
+        "C",
+        "SQL",
+        "PostgreSQL"
+      ],
+      "githubUrl": "https://github.com/postgresql/query-performance-optimization",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 257,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@postgresql-mentor"
+      ],
+      "topics": [
+        "Databases",
+        "Data Management"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "PostgreSQL",
+      "title": "Parallel Query Improvements",
+      "description": "The world's most advanced open source relational database. This project focuses on: Parallel Query Improvements",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C",
+        "SQL",
+        "PostgreSQL"
+      ],
+      "githubUrl": "https://github.com/postgresql/parallel-query-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 418,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@postgresql-mentor"
+      ],
+      "topics": [
+        "Databases",
+        "Data Management"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "PostgreSQL",
+      "title": "Replication Features",
+      "description": "The world's most advanced open source relational database. This project focuses on: Replication Features",
+      "difficulty": "beginner",
+      "techStack": [
+        "C",
+        "SQL",
+        "PostgreSQL"
+      ],
+      "githubUrl": "https://github.com/postgresql/replication-features",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 200,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@postgresql-mentor"
+      ],
+      "topics": [
+        "Databases",
+        "Data Management"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Drupal",
+      "title": "Drupal 10 Migration Tools",
+      "description": "Drupal is a free and open-source content management framework. This project focuses on: Drupal 10 Migration Tools",
+      "difficulty": "advanced",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "Symfony"
+      ],
+      "githubUrl": "https://github.com/drupal/drupal-10-migration-tools",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1071,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@drupal-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "CMS"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Drupal",
+      "title": "API-First Initiatives",
+      "description": "Drupal is a free and open-source content management framework. This project focuses on: API-First Initiatives",
+      "difficulty": "intermediate",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "Symfony"
+      ],
+      "githubUrl": "https://github.com/drupal/api-first-initiatives",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1007,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@drupal-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "CMS"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Drupal",
+      "title": "Admin UI Improvements",
+      "description": "Drupal is a free and open-source content management framework. This project focuses on: Admin UI Improvements",
+      "difficulty": "beginner",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "Symfony"
+      ],
+      "githubUrl": "https://github.com/drupal/admin-ui-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 446,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@drupal-mentor"
+      ],
+      "topics": [
+        "Web Development",
+        "CMS"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "OpenCV",
+      "title": "Deep Learning Module",
+      "description": "Open Source Computer Vision Library. This project focuses on: Deep Learning Module",
+      "difficulty": "advanced",
+      "techStack": [
+        "C++",
+        "Python",
+        "OpenCV",
+        "CUDA"
+      ],
+      "githubUrl": "https://github.com/opencv/deep-learning-module",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 527,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@opencv-mentor"
+      ],
+      "topics": [
+        "Computer Vision",
+        "Image Processing",
+        "AI"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "OpenCV",
+      "title": "Real-time Object Detection",
+      "description": "Open Source Computer Vision Library. This project focuses on: Real-time Object Detection",
+      "difficulty": "intermediate",
+      "techStack": [
+        "C++",
+        "Python",
+        "OpenCV",
+        "CUDA"
+      ],
+      "githubUrl": "https://github.com/opencv/real-time-object-detection",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1129,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@opencv-mentor"
+      ],
+      "topics": [
+        "Computer Vision",
+        "Image Processing",
+        "AI"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "OpenCV",
+      "title": "Mobile Optimization",
+      "description": "Open Source Computer Vision Library. This project focuses on: Mobile Optimization",
+      "difficulty": "beginner",
+      "techStack": [
+        "C++",
+        "Python",
+        "OpenCV",
+        "CUDA"
+      ],
+      "githubUrl": "https://github.com/opencv/mobile-optimization",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1002,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@opencv-mentor"
+      ],
+      "topics": [
+        "Computer Vision",
+        "Image Processing",
+        "AI"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Node.js",
+      "title": "Performance Improvements",
+      "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. This project focuses on: Performance Improvements",
+      "difficulty": "advanced",
+      "techStack": [
+        "JavaScript",
+        "C++",
+        "Node.js"
+      ],
+      "githubUrl": "https://github.com/node.js/performance-improvements",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 364,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@node.js-mentor"
+      ],
+      "topics": [
+        "Backend",
+        "JavaScript",
+        "Runtime"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Node.js",
+      "title": "Native Modules Support",
+      "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. This project focuses on: Native Modules Support",
+      "difficulty": "intermediate",
+      "techStack": [
+        "JavaScript",
+        "C++",
+        "Node.js"
+      ],
+      "githubUrl": "https://github.com/node.js/native-modules-support",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 379,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@node.js-mentor"
+      ],
+      "topics": [
+        "Backend",
+        "JavaScript",
+        "Runtime"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "Node.js",
+      "title": "Diagnostic Tools",
+      "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. This project focuses on: Diagnostic Tools",
+      "difficulty": "beginner",
+      "techStack": [
+        "JavaScript",
+        "C++",
+        "Node.js"
+      ],
+      "githubUrl": "https://github.com/node.js/diagnostic-tools",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 776,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@node.js-mentor"
+      ],
+      "topics": [
+        "Backend",
+        "JavaScript",
+        "Runtime"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "React",
+      "title": "React Server Components",
+      "description": "A JavaScript library for building user interfaces. This project focuses on: React Server Components",
+      "difficulty": "advanced",
+      "techStack": [
+        "JavaScript",
+        "TypeScript",
+        "React"
+      ],
+      "githubUrl": "https://github.com/react/react-server-components",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 1029,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@react-mentor"
+      ],
+      "topics": [
+        "Frontend",
+        "UI",
+        "Web Development"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "React",
+      "title": "DevTools Enhancement",
+      "description": "A JavaScript library for building user interfaces. This project focuses on: DevTools Enhancement",
+      "difficulty": "intermediate",
+      "techStack": [
+        "JavaScript",
+        "TypeScript",
+        "React"
+      ],
+      "githubUrl": "https://github.com/react/devtools-enhancement",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 875,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@react-mentor"
+      ],
+      "topics": [
+        "Frontend",
+        "UI",
+        "Web Development"
+      ],
+      "year": 2025
+    },
+    {
+      "org": "React",
+      "title": "Performance Profiling",
+      "description": "A JavaScript library for building user interfaces. This project focuses on: Performance Profiling",
+      "difficulty": "beginner",
+      "techStack": [
+        "JavaScript",
+        "TypeScript",
+        "React"
+      ],
+      "githubUrl": "https://github.com/react/performance-profiling",
+      "applicationDeadline": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "stars": 537,
+      "location": "Worldwide",
+      "orgSize": "large",
+      "mentors": [
+        "@react-mentor"
+      ],
+      "topics": [
+        "Frontend",
+        "UI",
+        "Web Development"
+      ],
+      "year": 2025
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Apache Software Foundation",
+      "description": "The Apache Software Foundation provides organizational, legal, and financial support for a broad range of open source software projects."
+    },
+    {
+      "name": "CERN-HSF",
+      "description": "High Energy Physics Software Foundation - developing software for particle physics experiments."
+    },
+    {
+      "name": "Django Software Foundation",
+      "description": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design."
+    },
+    {
+      "name": "Mozilla",
+      "description": "Mozilla is the not-for-profit organization behind Firefox and other open-source projects."
+    },
+    {
+      "name": "TensorFlow",
+      "description": "An end-to-end open source platform for machine learning."
+    },
+    {
+      "name": "Python Software Foundation",
+      "description": "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language."
+    },
+    {
+      "name": "GNOME Foundation",
+      "description": "The GNOME desktop environment and developer platform."
+    },
+    {
+      "name": "Google DeepMind",
+      "description": "Solving intelligence to advance science and benefit humanity."
+    },
+    {
+      "name": "The Linux Foundation",
+      "description": "The Linux Foundation supports the creation of sustainable open source ecosystems."
+    },
+    {
+      "name": "Blender Foundation",
+      "description": "Blender is the free and open source 3D creation suite."
+    },
+    {
+      "name": "Git",
+      "description": "Git is a free and open source distributed version control system."
+    },
+    {
+      "name": "Kubernetes",
+      "description": "Production-Grade Container Orchestration."
+    },
+    {
+      "name": "VideoLAN",
+      "description": "VLC media player and multimedia solutions."
+    },
+    {
+      "name": "Wikimedia Foundation",
+      "description": "The non-profit organization that operates Wikipedia and other free knowledge projects."
+    },
+    {
+      "name": "LLVM Compiler Infrastructure",
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies."
+    },
+    {
+      "name": "PostgreSQL",
+      "description": "The world's most advanced open source relational database."
+    },
+    {
+      "name": "Drupal",
+      "description": "Drupal is a free and open-source content management framework."
+    },
+    {
+      "name": "OpenCV",
+      "description": "Open Source Computer Vision Library."
+    },
+    {
+      "name": "Node.js",
+      "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine."
+    },
+    {
+      "name": "React",
+      "description": "A JavaScript library for building user interfaces."
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { Toaster } from 'react-hot-toast'
 import GoogleAnalytics from '@/components/providers/GoogleAnalytics'
+import GSoCDataBanner from '@/components/gsoc-data-banner'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
@@ -62,6 +63,7 @@ export default function RootLayout({
                 <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                     <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID || ''} />
                     <Header />
+                    <GSoCDataBanner />
                     <main className="flex-1 w-full">
                         {children}
                     </main>

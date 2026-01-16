@@ -24,6 +24,8 @@ const ProjectSchema = new Schema<GSoCProject>({
         index: true
     },
     mentors: [{ type: String }],
+    topics: [{ type: String, index: true }],
+    year: { type: Number, index: true },
     createdAt: { type: Date, default: Date.now },
 })
 

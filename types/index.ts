@@ -29,7 +29,9 @@ export interface GSoCProject {
     location: string
     orgSize: 'small' | 'medium' | 'large'
     mentors: string[]
-    createdAt: Date
+    topics?: string[]
+    year?: number
+    createdAt?: Date
 }
 
 export interface Contribution {
