@@ -135,13 +135,13 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
 
                                 <div className="pt-4 space-y-3">
                                     <a
-                                        href={`https://summerofcode.withgoogle.com/archive/${project.year || 2025}/organizations/${project.org.toLowerCase().replace(/\s+/g, '-')}`}
+                                        href={`https://summerofcode.withgoogle.com/archive/${project.year || 2025}/organizations`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="block"
                                     >
                                         <Button className="w-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all font-bold text-base" size="lg" variant="gradient">
-                                            Official Project Source
+                                            Official GSoC Archive
                                             <ExternalLink className="h-4 w-4 ml-2" />
                                         </Button>
                                     </a>
@@ -153,9 +153,9 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
                                             rel="noopener noreferrer"
                                             className="block"
                                         >
-                                            <Button variant="outline" className="w-full hover:bg-white/5 border-primary/20" size="lg">
+                                            <Button variant="outline" className="w-full hover:bg-white/5 border-primary/30 shadow-sm" size="lg">
                                                 <Code className="h-4 w-4 mr-2" />
-                                                View Source Code
+                                                View Project Codebase
                                             </Button>
                                         </a>
                                     )}
