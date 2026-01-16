@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Outfit } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { Header } from '@/components/layout/Header'
@@ -76,6 +77,7 @@ export default function RootLayout({
                             border: '1px solid rgba(255, 255, 255, 0.1)',
                         },
                     }} />
+                    <Analytics />
                 </ThemeProvider>
             </body>
         </html>
