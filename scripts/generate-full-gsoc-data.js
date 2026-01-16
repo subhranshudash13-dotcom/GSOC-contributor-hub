@@ -100,7 +100,7 @@ function generateProject(orgName) {
         description: desc,
         difficulty: sample(DIFFICULTIES),
         techStack: tech,
-        githubUrl: `https://github.com/${orgName.toLowerCase().replace(/[^a-z0-9]/g, '-')}/project-${randomInt(1, 999)}`,
+        githubUrl: `https://github.com/${orgName.toLowerCase().replace(/[^a-z0-9]/g, '-')}/project-${Math.random().toString(36).substring(7)}`,
         applicationDeadline: "2026-03-31T00:00:00.000Z",
         thumbnail: "",
         stars: randomInt(50, 5000),
