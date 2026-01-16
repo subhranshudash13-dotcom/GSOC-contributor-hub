@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronRight, ChevronLeft, Sparkles, Loader2, ExternalLink } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { ChevronRight, ChevronLeft, Sparkles, Loader2, ExternalLink, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -16,6 +17,7 @@ const TECH_SKILLS = [
 ]
 
 export function MatcherWizard() {
+    const router = useRouter()
     const [step, setStep] = useState(1)
     const [loading, setLoading] = useState(false)
     const [matches, setMatches] = useState<MatchResult[] | null>(null)
@@ -297,13 +299,26 @@ export function MatcherWizard() {
                             animate={{ opacity: 1, scale: 1 }}
                         >
                             <div className="text-center mb-8">
-                                <h2 className="text-4xl font-bold mb-4">Your Perfect Matches! 🎉</h2>
-                                <p className="text-muted-foreground">
-                                    We found {matches.length} projects that match your skills
-                                </p>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                                        Your Perfect Matches! 🎉
+                                    </h2>
+                                    <p className="text-muted-foreground text-lg">
+                                        We found <span className="font-bold text-primary">{matches.length}</span> projects that match your skills
+                                    </p>
+                                    {matches.length > 10 && (
+                                        <p className="text-sm text-muted-foreground mt-2">
+                                            Scroll down to see all matches
+                                        </p>
+                                    )}
+                                </motion.div>
                             </div>
 
-                            <div className="space-y-6">
+                            <div className="space-y-6 max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
                                 {matches.map((match, index) => (
                                     <motion.div
                                         key={match.project._id}
@@ -311,41 +326,65 @@ export function MatcherWizard() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: index * 0.1 }}
                                     >
-                                        <Card className="glass-dark border-primary/20 hover:border-primary/40 transition-all">
+                                        <Card className="glass-dark border-primary/20 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/10 group">
                                             <CardHeader>
                                                 <div className="flex items-start justify-between">
                                                     <div className="flex-1">
                                                         <div className="text-sm text-primary font-semibold mb-1">
                                                             {match.project.org}
                                                         </div>
-                                                        <CardTitle className="text-2xl">{match.project.title}</CardTitle>
+                                                        <CardTitle className="text-2xl group-hover:text-primary transition-colors">
+                                                            {match.project.title}
+                                                        </CardTitle>
                                                     </div>
-                                                    <div className="text-4xl font-bold text-gradient gradient-purple">
+                                                    <motion.div 
+                                                        className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+                                                        initial={{ scale: 0 }}
+                                                        animate={{ scale: 1 }}
+                                                        transition={{ delay: index * 0.1 + 0.3 }}
+                                                    >
                                                         {match.score}%
-                                                    </div>
+                                                    </motion.div>
                                                 </div>
                                             </CardHeader>
                                             <CardContent>
-                                                <p className="text-muted-foreground mb-4">{match.project.description}</p>
+                                                <p className="text-muted-foreground mb-4 leading-relaxed">{match.project.description}</p>
 
                                                 <div className="flex flex-wrap gap-2 mb-4">
                                                     {match.matchedSkills.map(skill => (
-                                                        <Badge key={skill} variant="default">{skill}</Badge>
+                                                        <Badge key={skill} variant="default" className="animate-in fade-in slide-in-from-bottom-2" style={{ animationDelay: `${index * 0.05}s` }}>
+                                                            {skill}
+                                                        </Badge>
                                                     ))}
-                                                    <Badge variant={match.project.difficulty}>
+                                                    <Badge variant={match.project.difficulty} className="animate-in fade-in slide-in-from-bottom-2" style={{ animationDelay: `${index * 0.05 + 0.1}s` }}>
                                                         {match.project.difficulty}
                                                     </Badge>
                                                 </div>
 
-                                                <p className="text-sm italic text-muted-foreground mb-4">
-                                                    "{match.reasoning}"
-                                                </p>
+                                                <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 mb-4">
+                                                    <p className="text-sm italic text-muted-foreground">
+                                                        💡 "{match.reasoning}"
+                                                    </p>
+                                                </div>
 
-                                                <a href={match.project.githubUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-                                                    <Button variant="gradient" className="w-full">
-                                                        View Project Details
+                                                {match.project._id ? (
+                                                    <Button 
+                                                        onClick={() => router.push(`/projects/${match.project._id}`)}
+                                                        variant="gradient" 
+                                                        className="w-full group"
+                                                    >
+                                                        View Full Project Details
+                                                        <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                                                     </Button>
-                                                </a>
+                                                ) : (
+                                                    <Button 
+                                                        variant="outline" 
+                                                        className="w-full" 
+                                                        disabled
+                                                    >
+                                                        Project Details Not Available
+                                                    </Button>
+                                                )}
                                             </CardContent>
                                         </Card>
                                     </motion.div>

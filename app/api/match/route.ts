@@ -20,11 +20,10 @@ export async function POST(req: NextRequest) {
         // Connect to database
         await dbConnect()
 
-        // Fetch all active projects
-        const projects = (await Project.find({
-            applicationDeadline: { $gte: new Date() }
-        })
-            .limit(50)
+        // Fetch all projects (including historical GSoC data)
+        // Remove the deadline filter to include historical projects
+        // Remove limit to get ALL projects for matching
+        const projects = (await Project.find({})
             .lean()) as unknown as GSoCProject[]
 
         if (projects.length === 0) {

@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Search, Filter, Download, Loader2 } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { Search, Filter, Download, Loader2, ArrowRight, Star } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -15,6 +17,7 @@ const TECH_STACK_OPTIONS = ['All', 'React', 'Python', 'Java', 'Go', 'Rust', 'Jav
 const ORG_SIZE_OPTIONS = ['all', 'small', 'medium', 'large']
 
 export default function ProjectsPage() {
+    const router = useRouter()
     const [projects, setProjects] = useState<GSoCProject[]>([])
     const [loading, setLoading] = useState(true)
     const [search, setSearch] = useState('')
@@ -174,42 +177,74 @@ export default function ProjectsPage() {
                     </div>
                 ) : (
                     <div className="grid gap-6">
-                        {projects.map(project => (
-                            <Card key={project._id} className="glass-dark border-primary/20 hover:border-primary/40 transition-all">
-                                <CardHeader>
-                                    <div className="flex items-start justify-between">
-                                        <div>
-                                            <div className="text-sm text-primary font-semibold mb-1">
-                                                {project.org}
+                        {projects.map((project, index) => (
+                            <motion.div
+                                key={project._id}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.05 }}
+                            >
+                                <Card
+                                    className="glass-dark border-primary/20 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/10 group cursor-pointer"
+                                    onClick={() => project._id && router.push(`/projects/${project._id}`)}
+                                >
+                                    <CardHeader>
+                                        <div className="flex items-start justify-between">
+                                            <div className="flex-1">
+                                                <Badge variant="secondary" className="mb-2">
+                                                    {project.org}
+                                                </Badge>
+                                                <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                                                    {project.title}
+                                                </CardTitle>
                                             </div>
-                                            <CardTitle className="text-2xl">{project.title}</CardTitle>
+                                            <Badge variant={project.difficulty as any} className="ml-2">
+                                                {project.difficulty}
+                                            </Badge>
                                         </div>
-                                        <Badge variant={project.difficulty as any}>
-                                            {project.difficulty}
-                                        </Badge>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-2">
+                                            {project.description}
+                                        </p>
 
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {project.techStack.map(tech => (
-                                            <Badge key={tech} variant="secondary">{tech}</Badge>
-                                        ))}
-                                    </div>
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            {project.techStack.slice(0, 5).map(tech => (
+                                                <Badge key={tech} variant="secondary" className="text-xs">{tech}</Badge>
+                                            ))}
+                                            {project.techStack.length > 5 && (
+                                                <Badge variant="outline" className="text-xs">
+                                                    +{project.techStack.length - 5} more
+                                                </Badge>
+                                            )}
+                                        </div>
 
-                                    <div className="flex items-center justify-between text-sm">
-                                        <span className="text-muted-foreground">
-                                            Deadline: {formatDate(project.applicationDeadline)}
-                                        </span>
-                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                            <Button variant="gradient">
-                                                View Details
-                                            </Button>
-                                        </a>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                                        <div className="flex items-center justify-between pt-4 border-t">
+                                            <div className="text-sm text-muted-foreground">
+                                                <p className="font-medium mb-1">Deadline</p>
+                                                <p>{formatDate(project.applicationDeadline)}</p>
+                                            </div>
+                                            {project._id ? (
+                                                <Button
+                                                    variant="gradient"
+                                                    className="group"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation()
+                                                        router.push(`/projects/${project._id}`)
+                                                    }}
+                                                >
+                                                    View Details
+                                                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                                </Button>
+                                            ) : (
+                                                <Button variant="outline" disabled>
+                                                    Details Unavailable
+                                                </Button>
+                                            )}
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
                         ))}
                     </div>
                 )}

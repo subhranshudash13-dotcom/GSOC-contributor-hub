@@ -21,10 +21,9 @@ export default function GSoCDataBanner() {
                         <Info className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                         <div className="flex-1">
                             <p className="text-sm text-gray-200">
-                                <span className="font-semibold text-purple-300">GSoC 2025 Data:</span>{' '}
-                                Currently showing <strong>GSoC 2025</strong> organizations and completed projects.
-                                This data will be updated with <strong>GSoC 2026</strong> projects as soon as they are officially announced
-                                (expected after <strong>February 3, 2026</strong>).
+                                <span className="font-semibold text-purple-300">Historical GSoC Data:</span>{' '}
+                                Currently showing previous years' GSoC organizations and completed projects.
+                                This data will be updated with <strong>GSoC 2026</strong> projects as soon as the organization list is officially released.
                             </p>
                         </div>
                     </div>

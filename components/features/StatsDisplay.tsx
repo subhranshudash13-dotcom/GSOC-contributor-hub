@@ -12,34 +12,60 @@ export function StatsDisplay() {
     })
 
     const targets = {
-        orgs: 500,
-        projects: 2000,
+        orgs: 185, // Historical GSoC organizations
+        projects: 0,
         contributors: 10000,
     }
 
     useEffect(() => {
-        const duration = 2000 // 2 seconds animation
-        const steps = 60
-        const interval = duration / steps
+        let timer: NodeJS.Timeout | null = null
 
-        let currentStep = 0
-        const timer = setInterval(() => {
-            currentStep++
-            const progress = currentStep / steps
-
-            setStats({
-                orgs: Math.floor(targets.orgs * progress),
-                projects: Math.floor(targets.projects * progress),
-                contributors: Math.floor(targets.contributors * progress),
-            })
-
-            if (currentStep >= steps) {
-                clearInterval(timer)
-                setStats(targets)
+        // Fetch real stats from API
+        const fetchStats = async () => {
+            try {
+                const response = await fetch('/api/projects')
+                if (response.ok) {
+                    const data = await response.json()
+                    const uniqueOrgs = new Set(data.projects?.map((p: any) => p.org) || []).size
+                    targets.projects = data.projects?.length || 0
+                    targets.orgs = uniqueOrgs || 185
+                }
+            } catch (error) {
+                console.error('Failed to fetch stats:', error)
             }
-        }, interval)
 
-        return () => clearInterval(timer)
+            // Animate to target values
+            const duration = 2000 // 2 seconds animation
+            const steps = 60
+            const interval = duration / steps
+
+            let currentStep = 0
+            timer = setInterval(() => {
+                currentStep++
+                const progress = currentStep / steps
+
+                setStats({
+                    orgs: Math.floor(targets.orgs * progress),
+                    projects: Math.floor(targets.projects * progress),
+                    contributors: Math.floor(targets.contributors * progress),
+                })
+
+                if (currentStep >= steps) {
+                    if (timer) clearInterval(timer)
+                    setStats({
+                        orgs: targets.orgs,
+                        projects: targets.projects,
+                        contributors: targets.contributors,
+                    })
+                }
+            }, interval)
+        }
+
+        fetchStats()
+
+        return () => {
+            if (timer) clearInterval(timer)
+        }
     }, [])
 
     const statItems = [

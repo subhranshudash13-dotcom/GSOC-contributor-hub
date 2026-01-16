@@ -52,7 +52,7 @@ ${i + 1}. ${p.title} by ${p.org}
    - Description: ${p.description.substring(0, 150)}...
 `).join('\n')}
 
-Task: Analyze the user's profile and return the top 5 best-matching projects. For each match, provide:
+Task: Analyze the user's profile and return the best-matching projects. For each match, provide:
 1. Project index (1-${projects.length})
 2. Match score (0-100)
 3. Matched skills (from user's skills that align with project tech stack)
@@ -70,7 +70,8 @@ Return ONLY valid JSON in this exact format:
   ]
 }
 
-Return exactly 5 matches, ordered by score (highest first).`
+Return ALL matches that score 50 or higher, ordered by score (highest first).
+There is no limit - return as many matches as meet the criteria.`
 }
 
 async function callOpenAI(prompt: string): Promise<AIResponse> {
@@ -214,7 +215,8 @@ function fallbackMatching(profile: UserProfile, projects: GSoCProject[]): MatchR
         }
     })
 
+    // Filter matches with score >= 30 and sort by score
     return scored
+        .filter(match => match.score >= 30)
         .sort((a, b) => b.score - a.score)
-        .slice(0, 5)
 }

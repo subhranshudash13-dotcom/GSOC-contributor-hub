@@ -36,8 +36,9 @@ export async function GET(req: NextRequest) {
             query.$text = { $search: search }
         }
 
-        // Only show projects with future deadlines
-        query.applicationDeadline = { $gte: new Date() }
+        // Show all projects (including historical GSoC data)
+        // Remove this filter if you want to show historical projects
+        // query.applicationDeadline = { $gte: new Date() }
 
         // Pagination
         const page = parseInt(searchParams.get('page') || '1')
