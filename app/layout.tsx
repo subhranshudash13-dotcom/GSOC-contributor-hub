@@ -9,6 +9,7 @@ import GoogleAnalytics from '@/components/providers/GoogleAnalytics'
 import GSoCDataBanner from '@/components/gsoc-data-banner'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import AuthContext from '@/components/providers/SessionProvider'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
@@ -65,25 +66,27 @@ export default function RootLayout({
                 <meta name="theme-color" content="#7C3AED" />
             </head>
             <body className={`${inter.variable} ${outfit.variable} font-sans antialiased min-h-screen flex flex-col bg-background text-foreground selection:bg-primary/20`}>
-                <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-                    <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID || ''} />
-                    <Header />
-                    <GSoCDataBanner />
-                    <main className="flex-1 w-full">
-                        {children}
-                    </main>
-                    <Footer />
-                    <Analytics />
-                    <SpeedInsights />
-                    <Toaster position="bottom-right" toastOptions={{
-                        style: {
-                            background: 'rgba(15, 23, 42, 0.8)',
-                            color: '#fff',
-                            backdropFilter: 'blur(10px)',
-                            border: '1px solid rgba(255, 255, 255, 0.1)',
-                        },
-                    }} />
-                </ThemeProvider>
+                <AuthContext>
+                    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+                        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID || ''} />
+                        <Header />
+                        <GSoCDataBanner />
+                        <main className="flex-1 w-full">
+                            {children}
+                        </main>
+                        <Footer />
+                        <Analytics />
+                        <SpeedInsights />
+                        <Toaster position="bottom-right" toastOptions={{
+                            style: {
+                                background: 'rgba(15, 23, 42, 0.8)',
+                                color: '#fff',
+                                backdropFilter: 'blur(10px)',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                            },
+                        }} />
+                    </ThemeProvider>
+                </AuthContext>
             </body>
         </html>
     )

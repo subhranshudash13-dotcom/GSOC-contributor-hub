@@ -14,7 +14,7 @@ const ContributionSchema = new Schema({
 })
 
 const UserSchema = new Schema<User>({
-    githubId: { type: String, required: true, unique: true },
+    githubId: { type: String },
     email: { type: String, required: true, unique: true },
     name: { type: String, required: true },
     avatar: { type: String },

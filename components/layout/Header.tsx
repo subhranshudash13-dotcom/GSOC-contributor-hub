@@ -2,10 +2,14 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Sparkles, ArrowRight, Github } from 'lucide-react'
+import { Sparkles, ArrowRight, Github, LogIn } from 'lucide-react'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
+import { useSession, signIn } from 'next-auth/react'
+import { UserAccountNav } from './UserAccountNav'
 
 export function Header() {
+    const { data: session, status } = useSession()
+
     return (
         <header className="sticky top-0 z-50 w-full border-b glass-dark backdrop-blur-xl">
             <div className="container flex h-16 items-center justify-between">
@@ -54,22 +58,26 @@ export function Header() {
 
                 <div className="flex items-center space-x-4">
                     <ThemeToggle />
-                    <a
-                        href="https://github.com/subhranshudash13-dotcom/GSOC-contributor-hub"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 text-sm font-medium transition-colors"
-                    >
-                        <Sparkles className="h-4 w-4 text-primary" />
-                        Source Code
-                    </a>
-                    <Link
-                        href="/matcher"
-                        className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full gradient-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
-                    >
-                        Get Started
-                        <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    {status === 'authenticated' && session.user ? (
+                        <UserAccountNav user={session.user} />
+                    ) : (
+                        <>
+                            <button
+                                onClick={() => signIn()}
+                                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 text-sm font-medium transition-colors"
+                            >
+                                <LogIn className="h-4 w-4" />
+                                Sign In
+                            </button>
+                            <Link
+                                href="/matcher"
+                                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full gradient-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                            >
+                                Get Started
+                                <ArrowRight className="h-4 w-4" />
+                            </Link>
+                        </>
+                    )}
                 </div>
             </div>
         </header>

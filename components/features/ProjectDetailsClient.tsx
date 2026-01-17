@@ -8,6 +8,10 @@ import { Card, CardContent } from '@/components/ui/card'
 import type { GSoCProject } from '@/types'
 import { formatDate } from '@/lib/utils'
 import toast from 'react-hot-toast'
+import { useSession } from 'next-auth/react'
+import { useState, useEffect } from 'react'
+import { Heart, Plus, Send, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface ProjectDetailsClientProps {
     project: GSoCProject
@@ -15,6 +19,70 @@ interface ProjectDetailsClientProps {
 
 export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
     const router = useRouter()
+    const { data: session } = useSession()
+    const [isSaved, setIsSaved] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [showLogModal, setShowLogModal] = useState(false)
+    const [logForm, setLogForm] = useState({ title: '', prUrl: '' })
+
+    useEffect(() => {
+        if (session) {
+            fetch(`/api/user/status?projectId=${project._id}`)
+                .then(res => res.json())
+                .then(data => setIsSaved(data.isTracked))
+                .catch(() => { })
+        }
+    }, [session, project._id])
+
+    const handleToggleSave = async () => {
+        if (!session) {
+            toast.error("Please sign in to save projects")
+            return
+        }
+        setIsLoading(true)
+        try {
+            const res = await fetch('/api/track', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ projectId: project._id, action: 'track' })
+            })
+            if (res.ok) {
+                setIsSaved(!isSaved)
+                toast.success(isSaved ? "Removed from shortcuts" : "Project saved to shortcuts!")
+            }
+        } catch (error) {
+            toast.error("Failed to update status")
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+    const handleLogContribution = async (e: React.FormEvent) => {
+        e.preventDefault()
+        if (!logForm.title || !logForm.prUrl) return
+
+        setIsLoading(true)
+        try {
+            const res = await fetch('/api/track', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    projectId: project._id,
+                    action: 'contribute',
+                    ...logForm
+                })
+            })
+            if (res.ok) {
+                toast.success("Contribution logged!")
+                setShowLogModal(false)
+                setLogForm({ title: '', prUrl: '' })
+            }
+        } catch (error) {
+            toast.error("Failed to log contribution")
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     const handleShare = () => {
         navigator.clipboard.writeText(window.location.href)
@@ -51,6 +119,17 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
                                     <Sparkles className="h-3 w-3" />
                                     Verified Official
                                 </Badge>
+                                <button
+                                    onClick={handleToggleSave}
+                                    disabled={isLoading}
+                                    className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all
+                                        ${isSaved
+                                            ? 'bg-gsoc-purple text-white shadow-[0_0_15px_rgba(124,58,237,0.4)]'
+                                            : 'bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20'}`}
+                                >
+                                    <Heart className={`h-3 w-3 ${isSaved ? 'fill-white' : ''}`} />
+                                    {isSaved ? 'Saved' : 'Save'}
+                                </button>
                             </div>
                             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
                                 {project.title}
@@ -146,6 +225,18 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
                                         </Button>
                                     </a>
 
+                                    {session && (
+                                        <Button
+                                            onClick={() => setShowLogModal(true)}
+                                            variant="outline"
+                                            className="w-full glass-dark border-gsoc-purple/30 hover:bg-gsoc-purple/10 text-gsoc-purple"
+                                            size="lg"
+                                        >
+                                            <Plus className="h-4 w-4 mr-2" />
+                                            Log Contribution
+                                        </Button>
+                                    )}
+
                                     {project.githubUrl && (
                                         <a
                                             href={project.githubUrl}
@@ -192,6 +283,68 @@ export function ProjectDetailsClient({ project }: ProjectDetailsClientProps) {
                     </div>
                 </div>
             </div>
+
+            {/* Contribution Log Modal */}
+            <AnimatePresence>
+                {showLogModal && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowLogModal(false)}
+                            className="absolute inset-0 bg-background/80 backdrop-blur-sm"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            className="relative w-full max-w-md glass-dark border border-primary/20 rounded-2xl p-6 shadow-2xl"
+                        >
+                            <button
+                                onClick={() => setShowLogModal(false)}
+                                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+
+                            <h3 className="text-xl font-bold mb-6">Log Project Activity</h3>
+
+                            <form onSubmit={handleLogContribution} className="space-y-4">
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium">Activity Title</label>
+                                    <input
+                                        required
+                                        value={logForm.title}
+                                        onChange={e => setLogForm({ ...logForm, title: e.target.value })}
+                                        placeholder="e.g., Drafted initial proposal"
+                                        className="w-full bg-background border border-primary/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium">Link (PR or Issue URL)</label>
+                                    <input
+                                        required
+                                        type="url"
+                                        value={logForm.prUrl}
+                                        onChange={e => setLogForm({ ...logForm, prUrl: e.target.value })}
+                                        placeholder="https://github.com/..."
+                                        className="w-full bg-background border border-primary/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/20"
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={isLoading}
+                                    className="w-full gradient-purple text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+                                >
+                                    {isLoading ? 'Saving...' : 'Save Activity'}
+                                    <Send className="h-4 w-4" />
+                                </button>
+                            </form>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </div>
     )
 }
