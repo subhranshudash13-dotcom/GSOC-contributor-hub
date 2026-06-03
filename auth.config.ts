@@ -2,25 +2,38 @@ import GitHub from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
 import type { NextAuthConfig } from "next-auth"
 
+const githubId = process.env.AUTH_GITHUB_ID ?? process.env.GITHUB_ID ?? process.env.GITHUB_CLIENT_ID
+const githubSecret =
+    process.env.AUTH_GITHUB_SECRET ?? process.env.GITHUB_SECRET ?? process.env.GITHUB_CLIENT_SECRET
+
+const googleId = process.env.AUTH_GOOGLE_ID ?? process.env.GOOGLE_ID ?? process.env.GOOGLE_CLIENT_ID
+const googleSecret =
+    process.env.AUTH_GOOGLE_SECRET ?? process.env.GOOGLE_SECRET ?? process.env.GOOGLE_CLIENT_SECRET
+
+const providers = [
+    ...(githubId && githubSecret
+        ? [GitHub({ clientId: githubId, clientSecret: githubSecret })]
+        : []),
+    ...(googleId && googleSecret
+        ? [Google({ clientId: googleId, clientSecret: googleSecret })]
+        : []),
+]
+
 export default {
-    providers: [
-        GitHub,
-        Google,
-    ],
+    providers,
     pages: {
         signIn: "/auth/signin",
     },
     callbacks: {
         authorized({ auth, request: { nextUrl } }) {
             const isLoggedIn = !!auth?.user
-            const isDashboard = nextUrl.pathname.startsWith('/dashboard')
-            const isAdmin = nextUrl.pathname.startsWith('/admin')
+            const isProtectedRoute =
+                nextUrl.pathname.startsWith("/dashboard") ||
+                nextUrl.pathname.startsWith("/admin") ||
+                nextUrl.pathname.startsWith("/profile")
 
-            if (isDashboard || isAdmin) {
-                if (isLoggedIn) return true
-                return false // Redirect to login
-            }
-            return true
+            if (!isProtectedRoute) return true
+            return isLoggedIn
         },
     },
 } satisfies NextAuthConfig

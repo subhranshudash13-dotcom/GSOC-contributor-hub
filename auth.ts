@@ -4,6 +4,11 @@ import clientPromise from "./lib/mongodb-adapter"
 import authConfig from "./auth.config"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+    secret: process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET,
+    trustHost:
+        process.env.AUTH_TRUST_HOST === "true" || process.env.NEXTAUTH_URL?.startsWith("http://localhost")
+            ? true
+            : undefined,
     adapter: MongoDBAdapter(clientPromise),
     session: { strategy: "jwt" },
     ...authConfig,

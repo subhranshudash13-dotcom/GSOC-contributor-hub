@@ -1,11 +1,34 @@
 'use client'
 
-import { signIn } from "next-auth/react"
-import { Github, Mail, Sparkles, LayoutDashboard, Search, Rocket } from "lucide-react"
+import { useEffect, useState } from "react"
+import { getProviders, signIn } from "next-auth/react"
+import { Github, Sparkles, LayoutDashboard, Rocket } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+type ProviderMap = Record<string, { id: string; name: string }>
+
 export default function SignInPage() {
+    const [providers, setProviders] = useState<ProviderMap | null>(null)
+
+    useEffect(() => {
+        let mounted = true
+        getProviders()
+            .then((p) => {
+                if (mounted) setProviders((p || null) as ProviderMap | null)
+            })
+            .catch(() => {
+                if (mounted) setProviders({} as ProviderMap)
+            })
+
+        return () => {
+            mounted = false
+        }
+    }, [])
+
+    const githubEnabled = !!providers?.github
+    const googleEnabled = !!providers?.google
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-background px-4 relative overflow-hidden">
             {/* Ambient Background */}
@@ -36,15 +59,17 @@ export default function SignInPage() {
                     {/* Social Login Buttons */}
                     <div className="space-y-4 mb-8">
                         <button
+                            disabled={!githubEnabled}
                             onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
-                            className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-[#24292F] hover:bg-[#24292F]/90 text-white font-semibold transition-all shadow-lg hover:shadow-xl active:scale-[0.98]"
+                            className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-[#24292F] hover:bg-[#24292F]/90 text-white font-semibold transition-all shadow-lg hover:shadow-xl active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <Github className="h-5 w-5" />
                             Continue with GitHub
                         </button>
                         <button
+                            disabled={!googleEnabled}
                             onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
-                            className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-white hover:bg-white/90 text-slate-900 font-semibold transition-all shadow-md hover:shadow-lg active:scale-[0.98]"
+                            className="w-full flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-white hover:bg-white/90 text-slate-900 font-semibold transition-all shadow-md hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <svg className="h-5 w-5" viewBox="0 0 24 24">
                                 <path
@@ -66,6 +91,12 @@ export default function SignInPage() {
                             </svg>
                             Continue with Google
                         </button>
+
+                        {providers && !githubEnabled && !googleEnabled && (
+                            <p className="text-center text-xs text-muted-foreground">
+                                No OAuth providers are configured. Please set your auth environment variables and restart the server.
+                            </p>
+                        )}
                     </div>
 
                     {/* Features Grid */}
@@ -82,7 +113,7 @@ export default function SignInPage() {
                 </div>
 
                 <p className="text-center mt-8 text-xs text-muted-foreground">
-                    Don't have an account? <span className="text-primary font-medium">It's automatically created when you sign in.</span>
+                    Don’t have an account? <span className="text-primary font-medium">It’s automatically created when you sign in.</span>
                 </p>
             </motion.div>
         </div>
