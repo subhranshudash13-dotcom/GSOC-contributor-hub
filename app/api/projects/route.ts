@@ -36,6 +36,11 @@ export async function GET(req: NextRequest) {
             query.$text = { $search: search }
         }
 
+        const year = searchParams.get('year')
+        if (year && year !== 'All') {
+            query.year = parseInt(year)
+        }
+
         // Show all projects (including historical GSoC data)
         // Remove this filter if you want to show historical projects
         // query.applicationDeadline = { $gte: new Date() }
@@ -45,10 +50,10 @@ export async function GET(req: NextRequest) {
         const limit = parseInt(searchParams.get('limit') || '20')
         const skip = (page - 1) * limit
 
-        // Sorting
-        const sortBy = searchParams.get('sortBy') || 'createdAt'
+        // Sorting — default to newest year first
+        const sortBy = searchParams.get('sortBy') || 'year'
         const sortOrder = searchParams.get('sortOrder') === 'asc' ? 1 : -1
-        const sort: any = { [sortBy]: sortOrder }
+        const sort: any = { [sortBy]: sortOrder, _id: -1 }
 
         // Execute query
         const [projectsRaw, total] = await Promise.all([

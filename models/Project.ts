@@ -3,6 +3,7 @@ import type { GSoCProject } from '@/types'
 
 const ProjectSchema = new Schema<GSoCProject>({
     org: { type: String, required: true, index: true },
+    orgSlug: { type: String, index: true },
     title: { type: String, required: true, index: true },
     description: { type: String, required: true },
     difficulty: {
@@ -12,7 +13,7 @@ const ProjectSchema = new Schema<GSoCProject>({
         index: true
     },
     techStack: [{ type: String, index: true }],
-    githubUrl: { type: String, required: true, unique: true },
+    githubUrl: { type: String, required: true },
     applicationDeadline: { type: Date, required: true, index: true },
     thumbnail: { type: String },
     stars: { type: Number, default: 0, index: true },

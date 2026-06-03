@@ -18,6 +18,7 @@ export interface User {
 export interface GSoCProject {
     _id?: string
     org: string
+    orgSlug?: string
     title: string
     description: string
     difficulty: 'beginner' | 'intermediate' | 'advanced'

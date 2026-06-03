@@ -11,9 +11,27 @@ import { Badge } from '@/components/ui/badge'
 import type { UserProfile, MatchResult } from '@/types'
 import toast from 'react-hot-toast'
 
-const TECH_SKILLS = [
-    'React', 'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'Go',
-    'Rust', 'Machine Learning', 'Node.js', 'Django', 'Docker', 'Kubernetes'
+const SKILL_CATEGORIES = [
+    {
+        name: 'Languages',
+        skills: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C', 'Go', 'Rust', 'Ruby', 'PHP', 'Kotlin', 'Swift', 'R', 'Julia', 'C#', 'Shell']
+    },
+    {
+        name: 'Frontend & UI',
+        skills: ['React', 'Vue', 'Angular', 'Svelte', 'Next.js', 'TailwindCSS', 'HTML/CSS', 'Three.js', 'D3.js', 'Flutter']
+    },
+    {
+        name: 'Backend & Databases',
+        skills: ['Node.js', 'Django', 'Spring Boot', 'Flask', 'Express', 'Ruby on Rails', 'GraphQL', 'FastAPI', 'PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'SQL']
+    },
+    {
+        name: 'DevOps & Infrastructure',
+        skills: ['Docker', 'Kubernetes', 'AWS', 'Firebase', 'Linux', 'Github Actions', 'Prometheus', 'WebAssembly']
+    },
+    {
+        name: 'AI, ML & Science',
+        skills: ['Machine Learning', 'Data Science', 'Deep Learning', 'PyTorch', 'TensorFlow', 'Computer Vision', 'NLP', 'Matplotlib', 'Jupyter']
+    }
 ]
 
 export function MatcherWizard() {
@@ -80,36 +98,43 @@ export function MatcherWizard() {
                         >
                             <Card className="glass-dark border-primary/20">
                                 <CardHeader>
-                                    <CardTitle className="text-3xl">Select Your Skills</CardTitle>
+                                    <CardTitle className="text-3xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Select Your Skills</CardTitle>
                                     <p className="text-muted-foreground mt-2">
-                                        Choose all technologies and programming languages you're comfortable with
+                                        Choose all technologies and programming languages you're comfortable with (select as many as apply)
                                     </p>
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="flex flex-wrap gap-3 mb-8">
-                                        {TECH_SKILLS.map(skill => (
-                                            <button
-                                                key={skill}
-                                                onClick={() => toggleSkill(skill)}
-                                                className={`px-4 py-2 rounded-full border-2 transition-all ${profile.skills.includes(skill)
-                                                    ? 'border-primary bg-primary text-primary-foreground'
-                                                    : 'border-border hover:border-primary/50'
-                                                    }`}
-                                            >
-                                                {skill}
-                                            </button>
+                                    <div className="space-y-6 mb-8">
+                                        {SKILL_CATEGORIES.map(category => (
+                                            <div key={category.name} className="space-y-2">
+                                                <h4 className="text-sm font-semibold uppercase tracking-wider text-primary/75">{category.name}</h4>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {category.skills.map(skill => (
+                                                        <button
+                                                            key={skill}
+                                                            onClick={() => toggleSkill(skill)}
+                                                            className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all ${profile.skills.includes(skill)
+                                                                ? 'border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/20 scale-105'
+                                                                : 'border-border bg-black/25 hover:border-primary/50 text-muted-foreground hover:text-foreground'
+                                                                }`}
+                                                        >
+                                                            {skill}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
 
                                     <Input
-                                        placeholder="Add custom skill..."
+                                        placeholder="Add custom skill (type and press Enter)..."
                                         onKeyPress={(e) => {
                                             if (e.key === 'Enter' && e.currentTarget.value) {
                                                 toggleSkill(e.currentTarget.value)
                                                 e.currentTarget.value = ''
                                             }
                                         }}
-                                        className="mb-6"
+                                        className="mb-6 bg-black/25 border-primary/10 hover:border-primary/30 focus:border-primary"
                                     />
 
                                     <div className="flex items-center justify-between">

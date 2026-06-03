@@ -12,8 +12,8 @@ export function StatsDisplay() {
     })
 
     const targets = {
-        orgs: 185, // Historical GSoC organizations
-        projects: 0,
+        orgs: 624,
+        projects: 12095,
         contributors: 10000,
     }
 
@@ -23,11 +23,17 @@ export function StatsDisplay() {
         // Fetch real stats from API
         const fetchStats = async () => {
             try {
-                const response = await fetch('/api/projects')
-                if (response.ok) {
-                    const data = await response.json()
-                    targets.projects = data.pagination?.total || 617
-                    targets.orgs = 185 // More accurate for 2025
+                const [projRes, orgRes] = await Promise.all([
+                    fetch('/api/projects?limit=1'),
+                    fetch('/api/organizations?limit=1')
+                ])
+                if (projRes.ok) {
+                    const projData = await projRes.json()
+                    targets.projects = projData.pagination?.total || 12095
+                }
+                if (orgRes.ok) {
+                    const orgData = await orgRes.json()
+                    targets.orgs = orgData.pagination?.total || 624
                 }
             } catch (error) {
                 console.error('Failed to fetch stats:', error)

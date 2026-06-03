@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { CountdownTimer } from '@/components/features/CountdownTimer'
 import { HeroSearchBar } from '@/components/features/HeroSearchBar'
 import { StatsDisplay } from '@/components/features/StatsDisplay'
 import { ProjectCarousel } from '@/components/features/ProjectCarousel'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Sparkles, Target, Rocket, Github } from 'lucide-react'
+import { ArrowRight, Sparkles, Target, Rocket, Github, Building2 } from 'lucide-react'
 
 export default function HomePage() {
     return (
@@ -35,17 +34,8 @@ export default function HomePage() {
                         </h1>
 
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                            AI-powered project matching for Google Summer of Code. Discover perfect opportunities from <span className="text-primary font-bold">617</span> organizations.
+                            AI-powered project matching for Google Summer of Code. Discover perfect opportunities from <span className="text-primary font-bold">624</span> organizations and <span className="text-primary font-bold">12,000+</span> projects (2016-2026).
                         </p>
-
-                        {/* Countdown */}
-                        <div className="py-8">
-                            <h3 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
-                                GSoC 2026 Begins In
-                            </h3>
-                            <CountdownTimer />
-                        </div>
-
                         {/* Search Bar */}
                         <div className="pt-8">
                             <HeroSearchBar />
@@ -60,21 +50,18 @@ export default function HomePage() {
                                     <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </Button>
                             </Link>
+                            <Link href="/organizations">
+                                <Button variant="outline" size="lg" className="glass group">
+                                    <Building2 className="h-5 w-5 mr-2" />
+                                    Explore Organizations
+                                    <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                                </Button>
+                            </Link>
                             <Link href="/projects">
-                                <Button variant="outline" size="lg" className="glass">
+                                <Button variant="secondary" size="lg" className="glass-dark border-primary/20 hover:border-primary/40">
                                     Browse All Projects
                                 </Button>
                             </Link>
-                            <a
-                                href="https://github.com/subhranshudash13-dotcom/GSOC-contributor-hub"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Button variant="secondary" size="lg" className="glass-dark border-primary/20 hover:border-primary/40 group">
-                                    <Github className="h-5 w-5 mr-2" />
-                                    View Hub Source
-                                </Button>
-                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 'use client'
 
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Sparkles, ArrowRight, Github, LogIn } from 'lucide-react'
@@ -9,6 +10,11 @@ import { UserAccountNav } from './UserAccountNav'
 
 export function Header() {
     const { data: session, status } = useSession()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     return (
         <header className="sticky top-0 z-50 w-full border-b glass-dark backdrop-blur-xl">
@@ -27,6 +33,12 @@ export function Header() {
                 </Link>
 
                 <nav className="hidden md:flex items-center space-x-6">
+                    <Link
+                        href="/organizations"
+                        className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                    >
+                        Explore Organizations
+                    </Link>
                     <Link
                         href="/projects"
                         className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
@@ -58,25 +70,27 @@ export function Header() {
 
                 <div className="flex items-center space-x-4">
                     <ThemeToggle />
-                    {status === 'authenticated' && session.user ? (
-                        <UserAccountNav user={session.user} />
-                    ) : (
-                        <>
-                            <button
-                                onClick={() => signIn()}
-                                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 text-sm font-medium transition-colors"
-                            >
-                                <LogIn className="h-4 w-4" />
-                                Sign In
-                            </button>
-                            <Link
-                                href="/matcher"
-                                className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full gradient-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
-                            >
-                                Get Started
-                                <ArrowRight className="h-4 w-4" />
-                            </Link>
-                        </>
+                    {mounted && (
+                        status === 'authenticated' && session.user ? (
+                            <UserAccountNav user={session.user} />
+                        ) : (
+                            <>
+                                <button
+                                    onClick={() => signIn()}
+                                    className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/5 text-sm font-medium transition-colors"
+                                >
+                                    <LogIn className="h-4 w-4" />
+                                    Sign In
+                                </button>
+                                <Link
+                                    href="/matcher"
+                                    className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full gradient-purple text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                                >
+                                    Get Started
+                                    <ArrowRight className="h-4 w-4" />
+                                </Link>
+                            </>
+                        )
                     )}
                 </div>
             </div>
